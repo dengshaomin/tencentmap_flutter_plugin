@@ -1,3 +1,4 @@
+#定位sdk
 -keepattributes *Annotation*
 -keepclassmembers class ** {
     public void on*Event(...);
@@ -15,3 +16,15 @@
 -dontwarn  android.location.Location
 -dontwarn  android.net.wifi.WifiManager
 -dontnote ct.**
+
+#地图sdk
+-keep public class com.tencent.lbssearch.** {*;}
+-keep public class com.tencent.map.** {*;}
+-keep public class com.tencent.mapsdk.** {*;}
+-keep public class com.tencent.tencentmap.**{*;}
+-keep public class com.tencent.tmsbeacon.**{*;}
+-keep public class com.tencent.tmsbeacon.**{*;}
+-dontwarn com.qq.**
+-dontwarn com.tencent.**
+
+

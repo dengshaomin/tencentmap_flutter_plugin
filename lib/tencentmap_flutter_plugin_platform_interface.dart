@@ -8,8 +8,7 @@ abstract class TencentmapFlutterPluginPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static TencentmapFlutterPluginPlatform _instance =
-  TencentmapFlutterPlugin();
+  static TencentmapFlutterPluginPlatform _instance = TencentmapFlutterPlugin();
 
   /// The default instance of [TencentmapFlutterPluginPlatform] to use.
   ///
@@ -31,7 +30,17 @@ abstract class TencentmapFlutterPluginPlatform extends PlatformInterface {
   Future<void> startSingleLocation() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
-  void addObserver(String path, Future<Map<String, dynamic>?> Function(Map<String, dynamic>?) callback) {
+
+  Future<void> setMapType(int type) {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<void> animateCamera(Map<String, Object?> params) {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  void addObserver(String path,
+      Future<Map<String, dynamic>?> Function(Map<String, dynamic>?) callback) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 

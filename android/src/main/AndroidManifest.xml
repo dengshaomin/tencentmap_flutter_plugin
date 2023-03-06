@@ -23,7 +23,15 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <!-- A-GPS辅助定位权限，方便GPS快速准确定位 -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <application>
-        <meta-data android:name="TencentMapSDK" android:value="2XABZ-WUXEX-QYI4A-TFDQZ-OMLFO-GEBJQ" />
+    <!--需要外部存储写权限用于保存地图缓存-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--获取 device id 辨别设备-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application
+        android:networkSecurityConfig="@xml/network_security_config_debug"
+        android:requestLegacyExternalStorage="true">
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="2XABZ-WUXEX-QYI4A-TFDQZ-OMLFO-GEBJQ" />
     </application>
 </manifest>

@@ -62,5 +62,7 @@ dependencies {
     compileOnly "io.flutter:arm64_v8a_release:1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
     compileOnly "io.flutter:armeabi_v7a_release:1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
     implementation 'com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.3.0'
+    implementation 'com.tencent.map:tencent-map-vector-sdk:4.3.4'
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }

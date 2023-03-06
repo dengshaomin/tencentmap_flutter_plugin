@@ -35,6 +35,18 @@ class TencentmapFlutterPlugin extends TencentmapFlutterPluginPlatform {
   }
 
   @override
+  Future<void> setMapType(int type) async {
+    // TODO: implement setMapType
+    _methodChannel.invokeMethod(MethodMap.setMapType, type);
+  }
+
+  @override
+  Future<void> animateCamera(Map<String, Object?> params) async {
+    // TODO: implement animateCamera
+    _methodChannel.invokeMethod(MethodMap.animateCamera, params);
+  }
+
+  @override
   void addObserver(
       String path,
       Future<Map<String, dynamic>?> Function(Map<String, dynamic>? p1)
@@ -57,4 +69,6 @@ class ChannelObserver {
 
 class MethodMap {
   static const String startSingleLocation = "startSingleLocation";
+  static const String setMapType = "setMapType";
+  static const String animateCamera = "animateCamera";
 }
