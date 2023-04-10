@@ -29,7 +29,9 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     _tencentFlutterPlugin.addObserver(MethodMap.startSingleLocation,
         (p1) async {
-      _tencentFlutterPlugin.animateCamera(p1 as Map<String, Object?>);
+      var params = p1 as Map<String, dynamic?>;
+      params["duration"] = 500;
+      _tencentFlutterPlugin.animateCamera(params);
     });
   }
 
